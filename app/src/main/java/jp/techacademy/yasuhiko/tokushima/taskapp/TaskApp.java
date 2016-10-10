@@ -10,6 +10,7 @@ import io.realm.RealmConfiguration;
  */
 
 public class TaskApp extends Application {
+
     @Override
     public void onCreate() {
         super.onCreate();

@@ -27,6 +27,7 @@ public class TaskAlarmReceiver extends BroadcastReceiver {
         // タスクの情報を設定する
         Task task = (Task) intent.getSerializableExtra(MainActivity.EXTRA_TASK);
         builder.setTicker(task.getTitle());
+        builder.setCategory(task.getCategory());
         builder.setContentTitle(task.getTitle());
         builder.setContentText(task.getContents());
 

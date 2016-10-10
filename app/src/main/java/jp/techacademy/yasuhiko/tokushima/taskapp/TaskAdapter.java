@@ -21,7 +21,8 @@ public class TaskAdapter extends BaseAdapter {
     private ArrayList<Task> mTaskArrayList;
 
     public TaskAdapter(Context context) {
-        mLayoutInFlater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        mLayoutInFlater =
+                (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     public void setTaskArrayList(ArrayList<Task> taskArrayList) {
@@ -54,9 +55,9 @@ public class TaskAdapter extends BaseAdapter {
 
         textview1.setText(mTaskArrayList.get(i).getTitle());
 
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-mm-dd HH:MM", Locale.JAPANESE);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.JAPANESE);
         Date date = mTaskArrayList.get(i).getDate();
-        textview2.setText(simpleDateFormat.format(date));
+        textview2.setText(simpleDateFormat.format(date) + " － " + mTaskArrayList.get(i).getCategory());
 
         return view;
     }
